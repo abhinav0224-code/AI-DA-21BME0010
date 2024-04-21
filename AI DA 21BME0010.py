@@ -1,6 +1,6 @@
 from collections import deque
 
-# BFS
+
 def bfs(graph, start):
     visited = set()
     queue = deque([start])
@@ -13,7 +13,7 @@ def bfs(graph, start):
                 queue.append(neighbor)
                 visited.add(neighbor)
 
-# DFS
+
 def dfs(graph, start, visited=None):
     if visited is None:
         visited = set()
@@ -23,7 +23,7 @@ def dfs(graph, start, visited=None):
         if neighbor not in visited:
             dfs(graph, neighbor, visited)
 
-# Example usage:
+
 graph = {
     'A': ['B', 'C'],
     'B': ['D', 'E'],
